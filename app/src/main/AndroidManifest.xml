@@ -23,6 +23,9 @@
             </intent-filter>
 
         </activity>
+        <activity android:name=".ResultadosActivity" />
+        <activity android:name=".BuscaActivity" />
+        <activity android:name=".SecaoActivity" />
 
     </application>
 
