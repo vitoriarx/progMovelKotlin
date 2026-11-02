@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Imagem do estabelecimento -->
+        <ImageView
+            android:id="@+id/imgEstabelecimento"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:background="@color/green_light"
+            android:scaleType="centerCrop"
+            android:contentDescription="Imagem do estabelecimento" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Nome -->
+            <TextView
+                android:id="@+id/txtNomeEstabelecimento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nome do estabelecimento"
+                android:textColor="@color/green_dark"
+                android:textSize="23sp"
+                android:textStyle="bold" />
+
+            <!-- Avaliação -->
+            <TextView
+                android:id="@+id/txtAvaliacao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="★ 4,8 (120 avaliações)"
+                android:textColor="@color/text_primary"
+                android:textSize="15sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:background="@color/green_light" />
+
+            <!-- Endereço -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Endereço"
+                android:textColor="@color/green_dark"
+                android:textStyle="bold"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/txtEnderecoEstabelecimento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="Endereço do estabelecimento"
+                android:textColor="@color/text_secondary"
+                android:textSize="15sp" />
+
+            <!-- Telefone -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:text="Contato"
+                android:textColor="@color/green_dark"
+                android:textStyle="bold"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/txtTelefoneEstabelecimento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="(82) 99999-9999"
+                android:textColor="@color/text_secondary"
+                android:textSize="15sp" />
+
+            <!-- Botão contato -->
+            <Button
+                android:id="@+id/btnContatoEstabelecimento"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_marginTop="24dp"
+                android:backgroundTint="@color/green_primary"
+                android:text="Entrar em contato"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

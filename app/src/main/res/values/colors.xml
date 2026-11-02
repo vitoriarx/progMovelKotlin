@@ -2,6 +2,7 @@
 <resources>
 
     <!-- Paleta principal -->
+    <color name="gold_dark">#B8860B</color>
     <color name="green_primary">#176B4D</color>
     <color name="green_dark">#0D4633</color>
     <color name="green_light">#E8F3EE</color>

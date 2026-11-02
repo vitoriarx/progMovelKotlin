@@ -1,65 +1,160 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@color/white"
-    android:padding="20dp">
+    android:background="@color/background"
+    android:fillViewport="true">
 
-    <TextView
-        android:id="@+id/txtTituloResultados"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Resultados"
-        android:textColor="@color/purple_700"
-        android:textSize="28sp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/txtSubtituloResultados"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Encontre empresas e serviços em Arapiraca"
-        android:textColor="@color/gray"
-        android:textSize="16sp" />
-
-    <EditText
-        android:id="@+id/edtBusca"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:hint="O que você procura?"
-        android:padding="12dp"
-        android:singleLine="true" />
+        android:orientation="vertical"
+        android:padding="24dp">
 
-    <TextView
-        android:id="@+id/txtResultados"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:text="Empresas encontradas"
-        android:textColor="@color/purple_700"
-        android:textSize="20sp"
-        android:textStyle="bold" />
+        <!-- Botão voltar -->
+        <TextView
+            android:id="@+id/btnVoltarResultados"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="← Voltar"
+            android:textColor="@color/green_dark"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:padding="8dp"
+            android:clickable="true"
+            android:focusable="true" />
 
-    <Button
-        android:id="@+id/btnEmpresa1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:backgroundTint="@color/laranja"
-        android:text="Studio Bella - Salão de Beleza"
-        android:textColor="@color/white" />
+        <!-- Título -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Encontre estabelecimentos"
+            android:textColor="@color/green_dark"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:layout_marginTop="24dp" />
 
-    <Button
-        android:id="@+id/btnEmpresa2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:backgroundTint="@color/laranja"
-        android:text="Espaço Glamour - Salão de Beleza"
-        android:textColor="@color/white" />
+        <!-- Descrição -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Informe seu CEP para consultar seu endereço e explorar as categorias disponíveis."
+            android:textColor="@color/text_secondary"
+            android:textSize="15sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="24dp" />
 
-</LinearLayout>
+        <!-- Campo de CEP -->
+        <EditText
+            android:id="@+id/edtBusca"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Digite seu CEP (somente números)"
+            android:inputType="number"
+            android:maxLength="8"
+            android:singleLine="true"
+            android:padding="16dp"
+            android:textColor="@color/text_primary"
+            android:textColorHint="@color/text_secondary"
+            android:backgroundTint="@color/green_primary" />
+
+        <!-- Botão consultar -->
+        <Button
+            android:id="@+id/btnConsultarCep"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Consultar CEP"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/green_primary"
+            android:layout_marginTop="16dp" />
+
+        <!-- Resultado da consulta -->
+        <TextView
+            android:id="@+id/txtResultadoCep"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:background="@drawable/bg_card_estabelecimento"
+            android:padding="18dp"
+            android:layout_marginTop="24dp"
+            android:textColor="@color/text_primary"
+            android:textSize="15sp"
+            android:lineSpacingExtra="5dp" />
+
+        <!-- Categorias -->
+        <LinearLayout
+            android:id="@+id/layoutCategorias"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:layout_marginTop="28dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Explore por categoria"
+                android:textColor="@color/green_dark"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Escolha o tipo de estabelecimento que deseja encontrar."
+                android:textColor="@color/text_secondary"
+                android:textSize="14sp"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Restaurantes -->
+            <Button
+                android:id="@+id/btnCategoriaRestaurantes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Restaurantes"
+                android:textAllCaps="false"
+                android:textColor="@color/green_dark"
+                android:backgroundTint="@color/gold_light"
+                android:layout_marginBottom="10dp" />
+
+            <!-- Academias -->
+            <Button
+                android:id="@+id/btnCategoriaAcademias"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Academias"
+                android:textAllCaps="false"
+                android:textColor="@color/green_dark"
+                android:backgroundTint="@color/gold_light"
+                android:layout_marginBottom="10dp" />
+
+            <!-- Lojas -->
+            <Button
+                android:id="@+id/btnCategoriaLojas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Lojas"
+                android:textAllCaps="false"
+                android:textColor="@color/green_dark"
+                android:backgroundTint="@color/gold_light"
+                android:layout_marginBottom="10dp" />
+
+            <!-- Bares -->
+            <Button
+                android:id="@+id/btnCategoriaBares"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bares"
+                android:textAllCaps="false"
+                android:textColor="@color/green_dark"
+                android:backgroundTint="@color/gold_light"
+                android:layout_marginBottom="10dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

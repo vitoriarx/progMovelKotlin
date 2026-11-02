@@ -148,6 +148,20 @@
             android:textColor="@color/text_secondary"
             android:textSize="15sp" />
 
+
+        <Button
+            android:id="@+id/btnConsultaCep"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="@color/green_primary"
+            android:text="Consultar CEP"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+
     </LinearLayout>
 
 </ScrollView>

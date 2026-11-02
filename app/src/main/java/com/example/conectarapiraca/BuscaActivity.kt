@@ -25,6 +25,7 @@ class BuscaActivity : AppCompatActivity() {
         val btnAcademias = findViewById<Button>(R.id.btnAcademias)
         val btnLojas = findViewById<Button>(R.id.btnLojas)
         val btnBares = findViewById<Button>(R.id.btnBares)
+        val btnConsultaCep = findViewById<Button>(R.id.btnConsultaCep)
 
         btnRestaurantes.setOnClickListener {
             abrirSecao("Restaurantes")
@@ -40,6 +41,11 @@ class BuscaActivity : AppCompatActivity() {
 
         btnBares.setOnClickListener {
             abrirSecao("Bares")
+        }
+
+        btnConsultaCep.setOnClickListener {
+            val intent = Intent(this, ResultadosActivity::class.java)
+            startActivity(intent)
         }
     }
 

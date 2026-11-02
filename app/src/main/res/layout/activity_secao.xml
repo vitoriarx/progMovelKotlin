@@ -1,60 +1,201 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@color/background"
-    android:padding="20dp">
+    android:background="@color/background">
 
-    <TextView
-        android:id="@+id/btnVoltarSecao"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="‹"
-        android:textColor="@color/green_dark"
-        android:textSize="40sp"
-        android:padding="4dp"
-        android:clickable="true"
-        android:focusable="true" />
-
-    <TextView
-        android:id="@+id/txtTituloSecao"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Restaurantes"
-        android:textColor="@color/green_dark"
-        android:textSize="28sp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Encontre os melhores lugares em Arapiraca"
-        android:textColor="@color/text_secondary"
-        android:textSize="15sp" />
-
-    <Button
-        android:id="@+id/btnExemplo1"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:layout_marginTop="30dp"
-        android:backgroundTint="@color/white"
-        android:text="Estabelecimento 1"
-        android:textAllCaps="false"
-        android:textColor="@color/text_primary"
-        android:textSize="16sp" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
 
-    <Button
-        android:id="@+id/btnExemplo2"
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:layout_marginTop="12dp"
-        android:backgroundTint="@color/white"
-        android:text="Estabelecimento 2"
-        android:textAllCaps="false"
-        android:textColor="@color/text_primary"
-        android:textSize="16sp" />
+        <!-- Botão voltar -->
+        <TextView
+            android:id="@+id/btnVoltarSecao"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:gravity="center"
+            android:text="‹"
+            android:textColor="@color/green_dark"
+            android:textSize="40sp"
+            android:clickable="true"
+            android:focusable="true"
+            android:contentDescription="Voltar" />
 
-</LinearLayout>
+        <!-- Título -->
+        <TextView
+            android:id="@+id/txtTituloSecao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Restaurantes"
+            android:textColor="@color/green_dark"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="Encontre os melhores lugares em Arapiraca"
+            android:textColor="@color/text_secondary"
+            android:textSize="14sp" />
+
+        <!-- Card 1 -->
+        <LinearLayout
+            android:id="@+id/btnExemplo1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_card_estabelecimento"
+            android:padding="12dp"
+            android:elevation="2dp"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:id="@+id/imgEstabelecimento1"
+                android:layout_width="105dp"
+                android:layout_height="120dp"
+                android:background="@color/green_light"
+                android:src="@android:drawable/ic_menu_gallery"
+                android:tint="@color/green_dark"
+                android:scaleType="centerCrop"
+                android:contentDescription="Imagem do estabelecimento 1" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="12dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtNomeEstabelecimento1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Estabelecimento 1"
+                    android:textColor="@color/green_dark"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Estabelecimento comercial"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/txtAvaliacao1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="★ 4,8 (120 avaliações)"
+                    android:textColor="@color/gold_dark"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/txtEndereco1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Centro, Arapiraca - AL"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/txtTelefone1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="(82) 99999-9999"
+                    android:textColor="@color/green_primary"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Card 2 -->
+        <LinearLayout
+            android:id="@+id/btnExemplo2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_card_estabelecimento"
+            android:padding="12dp"
+            android:elevation="2dp"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:id="@+id/imgEstabelecimento2"
+                android:layout_width="105dp"
+                android:layout_height="120dp"
+                android:background="@color/gold_light"
+                android:src="@android:drawable/ic_menu_gallery"
+                android:tint="@color/green_dark"
+                android:scaleType="centerCrop"
+                android:contentDescription="Imagem do estabelecimento 2" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="12dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtNomeEstabelecimento2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Estabelecimento 2"
+                    android:textColor="@color/green_dark"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Estabelecimento comercial"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/txtAvaliacao2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="★ 4,5 (85 avaliações)"
+                    android:textColor="@color/gold_dark"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/txtEndereco2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Centro, Arapiraca - AL"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/txtTelefone2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="(82) 98888-8888"
+                    android:textColor="@color/green_primary"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
