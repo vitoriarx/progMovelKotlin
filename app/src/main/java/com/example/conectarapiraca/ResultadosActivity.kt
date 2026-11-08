@@ -1,20 +1,20 @@
 package com.example.conectarapiraca
-
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
+import com.example.conectarapiraca.R
 import com.example.conectarapiraca.data.remote.RetrofitClient
 import kotlinx.coroutines.launch
-import java.io.IOException
 import retrofit2.HttpException
+import java.io.IOException
 
 class ResultadosActivity : AppCompatActivity() {
 
