@@ -17,8 +17,9 @@ class MainActivity : AppCompatActivity() {
 
         val btnBuscar = findViewById<Button>(R.id.btnBuscar)
 
+        // Agora o botão abre direto a tela de consulta de CEP
         btnBuscar.setOnClickListener {
-            val intent = Intent(this, BuscaActivity::class.java)
+            val intent = Intent(this, ResultadosActivity::class.java)
             startActivity(intent)
         }
     }

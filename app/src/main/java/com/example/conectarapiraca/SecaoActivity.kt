@@ -17,7 +17,7 @@ class SecaoActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         supportActionBar?.hide()
-        setContentView(R.layout.activity_secao)
+        setContentView(R.layout.activity_secao) //Carrega o desenho da tela
 
         val btnVoltar = findViewById<TextView>(R.id.btnVoltarSecao)
         btnVoltar.setOnClickListener { finish() }

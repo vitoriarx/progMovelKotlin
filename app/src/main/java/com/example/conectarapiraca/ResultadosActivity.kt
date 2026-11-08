@@ -74,15 +74,16 @@ class ResultadosActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
+            // Coroutine
             lifecycleScope.launch {
 
-                btnConsultar.isEnabled = false
+                btnConsultar.isEnabled = false // Desliga o botão pra o usuário não clicar mais de um vez
 
-                // Exibe carregamento
+                // Exibe mensagem de carregamento
                 txtResultado.visibility = View.VISIBLE
                 txtResultado.text = "Consultando endereço..."
 
-                layoutCategorias.visibility = View.GONE
+                layoutCategorias.visibility = View.GONE // Esconde as categorias de uma consulta anterior
 
                 try {
 
@@ -137,7 +138,7 @@ class ResultadosActivity : AppCompatActivity() {
                             "Erro na consulta. Código: ${e.code()}"
                         }
 
-                    Log.e("CONSULTA_CEP", "Erro HTTP", e)
+                    Log.e("CONSULTA_CEP", "Erro HTTP", e) // Registra o logcat pra poder depurar
 
                 } catch (e: IOException) {
 
@@ -161,7 +162,7 @@ class ResultadosActivity : AppCompatActivity() {
         }
     }
 
-    // Abre a seção selecionada e envia o CEP consultado
+    // Abre a seção selecionada (secaoActivity) e envia o CEP consultado
     private fun abrirSecao(nomeSecao: String, cep: String) {
 
         val intent = Intent(this, SecaoActivity::class.java)
